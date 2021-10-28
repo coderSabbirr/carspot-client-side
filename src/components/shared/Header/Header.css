@@ -1,0 +1,11 @@
+.header .navbar-brand {
+    margin-right: 10rem !important;
+}
+.header .nav-link{
+    font-weight: 600 ;
+    color: black;
+    margin-right:5px ;
+}
+.header .nav-link:hover {
+    color: #ff7f47 !important;
+}

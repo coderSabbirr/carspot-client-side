@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap');
+.banner {
+    padding: 165px;
+    background: linear-gradient(rgba(48, 79, 71, 0.575) 100%, rgba(48, 79, 71, .65) 0), url(https://i.ibb.co/4mJdLg5/banner-1-0158ff1d.png);
+    font-family: Quicksand,sans-serif;
+}
+
+.banner h1 {
+    max-width: 617px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 90px;
+    color: #fff;
+}
+
+.banner h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    margin: 30px;
+}
+
+.custom_color {
+    color: #ff7f47;
+}
+
+.banner_btn {
+    border: 0;
+    background-color: #304f47;
+    padding: 15px 35px;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: .8s;
+
+}
+.banner_btn:hover {
+    background-color: #ff7f47;
+}

@@ -1,0 +1,22 @@
+.shipping-form input {
+    margin-bottom: 10px;
+    width: 300px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.shipping-form {
+    margin-left: 60%;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.submit-btn {
+    background-color: #FF7F47;
+    border: 0;
+    width: 150px !important;
+    padding: 10px;
+    margin-left: 120px !important;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    
+}

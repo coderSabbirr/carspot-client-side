@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './SinglePackages.css'
-const SinglePackages = ({tourPackage}) => {
+const PackageCart = ({tourPackage}) => {
    const{_id,name,day,cost,img,rating}=tourPackage;
     return (
         <div className="tour_Cart">
-            <img  src={img}  alt="" />
+            <img src={img}  alt="" />
             <div className="p-2">
             <div className="d-flex">
             <h5 className="me-5">${cost}/Per Person</h5>
@@ -19,4 +18,4 @@ const SinglePackages = ({tourPackage}) => {
     );
 };
 
-export default SinglePackages;
+export default PackageCart;

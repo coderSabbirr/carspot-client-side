@@ -1,0 +1,5 @@
+.mange-order {
+    display: grid;
+    grid-template-columns: repeat(3,1fr) !important;
+    place-items: center;
+}

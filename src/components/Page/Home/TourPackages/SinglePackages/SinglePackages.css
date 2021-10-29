@@ -1,0 +1,30 @@
+.tour_Cart {
+    margin: 20px;
+    margin-bottom: 40px;
+    width:370px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: .4s;
+    height: 430px;
+    
+}
+.tour_Cart:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+.book_now {
+    background-color: transparent;
+    padding: 10px 25px ;
+    text-align:center;
+    background-color: #FF7F47;
+    border-radius: 5px;
+    color: white;
+    font-weight:500;
+    border:0;
+    margin-left: 30%;
+    text-decoration: none;
+    
+}
+.tour_Cart img {
+width: 370px;
+height: 225px;
+}

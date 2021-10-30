@@ -38,10 +38,10 @@ const SingleOrderCart = ({order}) => {
                         <h5 >{day}</h5>
                     </div>
                     <h2 className="custom_color">{name}</h2>
-                    <p className="text-primary">Customer Name :{order.full_name}</p>
-                    <p className="custom_color">Customer Email :{order.email}</p>
-                    <button className="btn btn-primary me-4 mt-5 ms-5" onClick={()=> handleDelete(order._id)}>Delete Order</button>
-                    <button className="btn btn-danger mt-5" >Approve Order</button>
+                    <p className=" customer_n ">Customer Name : {order.full_name.toUpperCase()}</p>
+                    <p className=" customer_e">Customer Email :{order.email}</p>
+                    <button className="btn btn-danger me-4 mt-5 ms-5" onClick={()=> handleDelete(order._id)}>Delete Order</button>
+                    <button className="btn btn-primary mt-5" >Approve Order</button>
                 </div>
             </div>
             

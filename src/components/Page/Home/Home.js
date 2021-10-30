@@ -10,7 +10,7 @@ const Home = () => {
             <Banner></Banner>
             <TourPackages></TourPackages>
             <Section1></Section1>
-            <TourGuide></TourGuide>
+            <TourGuide></TourGuide> 
         </div>
     );
 };

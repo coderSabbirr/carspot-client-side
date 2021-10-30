@@ -1,4 +1,15 @@
 .single-Order-Cart  {
-  height: 500px !important;
+  height: 550px !important;
   border-radius: 10px;
+}
+.customer_n{
+  margin-top: 50px;
+  line-height:0;
+  color:rgb(0, 153, 255);
+  font-weight:500;
+}
+.customer_e{
+  line-height:1;
+  color:rgb(0, 153, 255);
+  
 }

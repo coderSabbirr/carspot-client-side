@@ -28,3 +28,8 @@
 width: 370px;
 height: 225px;
 }
+@media only screen and (max-width: 688px) {
+    .tour_Cart{
+       margin:12px
+    }
+  }

@@ -22,7 +22,7 @@ const MyOrders = () => {
                 <h2>My Order</h2>
             </div>
             <div className="container">
-            <div className="myorders">
+            <div className="myorders mt-5">
                 {
 
                     myOrders?.map(order => <Order

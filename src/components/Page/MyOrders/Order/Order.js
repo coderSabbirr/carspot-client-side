@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Order.css'
 const Order = ({order}) => {
     const handleDelete =id =>{
         const url=`http://localhost:4000/orders/${id}`
@@ -22,8 +22,8 @@ const Order = ({order}) => {
                         <h5 >{day}</h5>
                     </div>
                     <h2 className="custom_color">{name}</h2>
-                    <button className="m-auto me-5 mt-5" onClick={()=> handleDelete(order._id)}>Cencel Order</button>
-                    <button className="ms-5 mt-5" >{order.status}</button>
+                    <button className="m-auto me-5 mt-5 cencel-btn" onClick={()=> handleDelete(order._id)}>Cencel Order</button>
+                    <button className="ms-5 mt-5 status-btn" >{order.status}</button>
                 </div>
             </div>
         </div>

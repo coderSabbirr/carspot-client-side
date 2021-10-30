@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+
 import { useHistory,useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-
+import './login.css'
 
 const Login = () => {
     const{signInUsingGoogle,setError}=useAuth();
@@ -23,8 +23,8 @@ const Login = () => {
     }
     
     return (
-        <div className="text-center mt-5">
-            <button className="btn btn-primary " onClick={handalGoogleLogin}>Login with google</button>
+        <div className="text-center mt-5 login">
+            <p className="login-btn"><img src="https://i.ibb.co/xCQCnvY/5a35540277d9e6-8445514415134443544909.png" alt="" /><button  onClick={handalGoogleLogin}>Login with google</button></p>
         </div>
     );
 };

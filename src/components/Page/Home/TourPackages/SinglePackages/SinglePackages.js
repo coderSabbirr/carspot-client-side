@@ -4,7 +4,7 @@ import './SinglePackages.css'
 const SinglePackages = ({tourPackage}) => {
    const{_id,name,day,cost,img,rating}=tourPackage;
     return (
-        <div className="tour_Cart">
+        <div className="tour_Cart single_Cart">
             <img  src={img}  alt="" />
             <div className="p-2">
             <div className="d-flex">

@@ -4,13 +4,13 @@ import NewPackage from './newPackage/NewPackage';
 import './AddNew.js.css'
 
 const AddNew = () => {
-const[addnewpackages,setAddnewpackages]=useState([])
+    const [addnewpackages, setAddnewpackages] = useState([])
 
     useEffect(() => {
-    fetch('http://localhost:4000/addnew/newpackage')
-.then((res) =>res.json())
-.then(data=> setAddnewpackages(data))
-    },[])
+        fetch('http://localhost:4000/addnew/newpackage')
+            .then((res) => res.json())
+            .then(data => setAddnewpackages(data))
+    }, [])
 
     const { register, handleSubmit } = useForm();
     const newpackage = "newpackage"
@@ -25,43 +25,43 @@ const[addnewpackages,setAddnewpackages]=useState([])
             .then((result) => {
 
             });
-        
+
     };
     return (
-        <div> 
+        <div>
             <div className="our_package-img mb-5">
-<h2>Add A New Package</h2>
+                <h2>Add A New Package</h2>
             </div>
-            <div className="d-flex container">
-            <div>
- {
-     addnewpackages.map(addnewpackage=><NewPackage
-        addnewpackage={addnewpackage}
-        key={addnewpackage._id}
+            <div className="d-flex container addnew-packge">
+                <div>
+                    {
+                        addnewpackages.map(addnewpackage => <NewPackage
+                            addnewpackage={addnewpackage}
+                            key={addnewpackage._id}
 
-     >
+                        >
 
-     </NewPackage>)
- }
+                        </NewPackage>)
+                    }
+                </div>
+                <div >
+                    <form className="shipping-form add-form " onSubmit={handleSubmit(onSubmit)} >
+
+                        <input defaultValue="" placeholder="Package Name" {...register("name", { required: true })} />
+                        <br />
+                        <input defaultValue="5 Days/6 night" placeholder="Day" {...register("day", { required: true })} />
+                        <br />
+                        <input placeholder="Cost $" defaultValue="180" {...register("cost")} />
+                        <br />
+                        <input placeholder="Rating" defaultValue="8" {...register("rating")} />
+                        <br />
+                        <input placeholder="Img Link" defaultValue="" {...register("img", { required: true })} />
+                        <br />
+                        <input type="submit" value="Add Package" className="submit-btn" />
+                    </form>
+                </div>
+
             </div>
-            <div>
-                <form className="shipping-form add-form " onSubmit={handleSubmit(onSubmit)} >
-
-                    <input defaultValue="" placeholder="Package Name" {...register("name", { required: true })} />
-                    <br />
-                    <input defaultValue="5 Days/6 night" placeholder="Day" {...register("day", { required: true })} />
-                    <br />
-                    <input placeholder="Cost $" defaultValue="180" {...register("cost")} />
-                    <br />
-                    <input placeholder="Rating" defaultValue="8" {...register("rating")} />
-                    <br />
-                    <input placeholder="Img Link" defaultValue="" {...register("img", { required: true })} />
-                    <br />
-                    <input type="submit" value="Add Package" className="submit-btn" />
-                </form>
-            </div>
-            
-        </div>
         </div>
     );
 };

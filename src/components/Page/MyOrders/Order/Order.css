@@ -1,0 +1,16 @@
+.cencel-btn {
+    background-color: rgb(230, 64, 14);
+    border: 0;
+    color: white;
+    padding:10px 20px;
+    font-weight: 500;
+    border-radius:25px;
+}
+.status-btn{
+    background-color: rgb(14, 198, 230);
+    border: 0;
+    color: rgb(255, 255, 255);
+    padding:10px 30px;
+    font-weight: 500;
+    border-radius:25px;
+}

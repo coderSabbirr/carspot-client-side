@@ -20,3 +20,17 @@
     font-weight: 500;
     
 }
+.booking-sec{
+    margin-top:100px;
+}
+.Booking_heading{
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+}
+@media only screen and (max-width: 688px) {
+    .booking-sec{
+        display: flex;
+        flex-direction: column;
+    }
+  }

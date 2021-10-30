@@ -37,7 +37,11 @@ const Booking = () => {
       };
     
     return (
-        <div className="d-flex container">
+       <div> 
+           <div className="our_package-img">
+               <h1 className="Booking_heading">Booking Details </h1>
+           </div>
+            <div className="d-flex container booking-sec">
             <div className="tour_Cart">
                 <img src={img} alt="" />
                 <div className="p-2">
@@ -67,6 +71,7 @@ const Booking = () => {
                     </form>
                 </div>
             </div>
+       </div>
         
     );
 };

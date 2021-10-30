@@ -1,0 +1,39 @@
+.footer {
+    background-color: #3d4461;
+    padding-top: 30px;
+    margin-top: 60px;
+    
+}
+.footer-text {
+    color: white;
+    padding-left:10%;
+}
+.copy-right {
+    background-color: #373D57;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+.doc-copy {
+color: #21b8f0;
+}
+.address {
+    margin-right:10%;
+}
+.fab {
+margin-right: 10px;
+font-size: 20px;
+}
+@media only screen and (max-width: 688px) {
+    .footer-text {
+        flex-direction: column !important;
+    
+    }
+    .live-feed {
+        margin-top: 40px;
+    }
+    .copy-right {
+        font-size: 14px;
+    }
+  }

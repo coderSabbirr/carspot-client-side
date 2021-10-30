@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router,Route } from 'react-router-dom';
+import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './components/context/AuthProvider';
 import MangeOrder from './components/mangeOrder/MangeOrder';
@@ -9,15 +9,18 @@ import Home from './components/Page/Home/Home'
 import Login from './components/Page/Login/Login';
 import MyOrders from './components/Page/MyOrders/MyOrders';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Footer from './components/shared/Footer/Footer';
 import Header from './components/shared/Header/Header';
 import AllPackage from './components/TourPackage/AllPackage';
+import NotFound from './components/Page/NotFound/NotFound'
 
 function App() {
   return (
     <AuthProvider>
        <Router>
        <Header></Header>
-     <Route exact path="/">
+     <Switch>
+    < Route exact path="/">
           <Home></Home>
      </Route>
      <Route exact path="/home">
@@ -41,6 +44,11 @@ function App() {
      <Route  path="/login">
           <Login></Login>
      </Route>
+     <Route  path="*">
+          <NotFound></NotFound>
+     </Route>
+     </Switch>
+     <Footer></Footer>
      </Router>
     </AuthProvider>
   );

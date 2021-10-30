@@ -28,7 +28,11 @@ const[addnewpackages,setAddnewpackages]=useState([])
         
     };
     return (
-        <div className="d-flex container">
+        <div> 
+            <div className="our_package-img mb-5">
+<h2>Add A New Package</h2>
+            </div>
+            <div className="d-flex container">
             <div>
  {
      addnewpackages.map(addnewpackage=><NewPackage
@@ -57,6 +61,7 @@ const[addnewpackages,setAddnewpackages]=useState([])
                 </form>
             </div>
             
+        </div>
         </div>
     );
 };

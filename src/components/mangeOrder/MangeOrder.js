@@ -11,7 +11,11 @@ fetch('http://localhost:4000/orders')
 .then((data) =>setOrders(data))
     },[])
     return (
-        <div className="container">
+        <div>
+            <div className="our_package-img">
+               <h2> Manage All Orders</h2>
+            </div>
+            <div className="container">
            <div className="mange-order">
            {
                 Orders.map(order =><SingleOrderCart
@@ -22,6 +26,7 @@ fetch('http://localhost:4000/orders')
                 </SingleOrderCart>)
             }
            </div>
+        </div>
         </div>
     );
 };

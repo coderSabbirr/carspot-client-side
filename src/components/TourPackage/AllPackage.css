@@ -1,0 +1,13 @@
+.our_package-img {
+background-image:linear-gradient(rgba(0, 0, 0, 0.466) 100%,rgba(0, 0, 0, 0.479) 0),url(https://i.ibb.co/cgj2wTD/breadcrumb-bg-9cc4efda.png);
+height:220px;
+background-size: cover;
+}
+.our_package-img h2 {
+   text-align: center;
+   color:white;
+   padding-top:100px;
+   font-size:40px;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+    

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-
+import './AllPackage.css'
 import PackageCart from './PackageCart/PackageCart';
 const TourPackages = () => {
     const[tourPackages,setTourPackages]=useState([])
@@ -11,7 +11,11 @@ const TourPackages = () => {
         .then(data=>setTourPackages(data))
     },[])
     return (
-        <div className="container our_package">
+        <div className="">
+            <div className="our_package-img">
+            <h2>Tour Packages</h2>
+            </div>
+            <div className="container our_package">
             <div className="mt-5 pt-5">
                 <h2 className="custom_color text-center mb-5">Choose Your Package</h2>
                
@@ -26,6 +30,7 @@ const TourPackages = () => {
                     }
                 </div>
             </div>
+        </div>
         </div>
     );
 };

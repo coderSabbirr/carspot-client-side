@@ -17,7 +17,11 @@ const MyOrders = () => {
 
 
     return (
-        <div className="container">
+        <div>
+            <div className="our_package-img">
+                <h2>My Order</h2>
+            </div>
+            <div className="container">
             <div className="myorders">
                 {
 
@@ -28,6 +32,7 @@ const MyOrders = () => {
 
                 }
             </div>
+        </div>
         </div>
     );
 };

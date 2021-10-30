@@ -8,3 +8,21 @@
 .header .nav-link:hover {
     color: #ff7f47 !important;
 }
+.custom-login-btn {
+    margin-top: 7px;
+    background-color: #FF7F47;
+    padding: 8px 20px;
+    border: 0;
+    border-radius:20px;
+    color: white;
+    font-weight: 500;
+}
+.user img{
+    width:60px;
+    border-radius:50px;
+}
+ .user-name{
+     font-weight: 500;
+     margin-top: 18px;
+     margin-left: 10px;
+ }

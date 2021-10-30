@@ -4,7 +4,7 @@ const Order = ({order}) => {
     const handleDelete =id =>{
         if (window.confirm("Delete the item?")) {
             
-            const url=`http://localhost:4000/orders/${id}`
+            const url=`https://mighty-forest-85314.herokuapp.com/orders/${id}`
             fetch(url,{
                 method:'DELETE'
             })

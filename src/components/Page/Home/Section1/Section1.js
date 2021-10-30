@@ -5,7 +5,7 @@ const Section1 = () => {
     return (
         <div className="container d-flex section1">
            <div>
-           <img src="http://zwin.io/react/viaje/assets/img/others/client-review.png" alt="" />
+           <img src="https://i.ibb.co/TBV0SvK/client-review-1.png" alt="" />
            </div>
            <div className="section1-text">
                <p className=" text-primary">Travel Reviews</p>

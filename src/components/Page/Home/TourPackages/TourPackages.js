@@ -7,7 +7,7 @@ const TourPackages = () => {
     const[tourPackages,setTourPackages]=useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:4000/packages')
+        fetch('https://mighty-forest-85314.herokuapp.com/packages')
         .then(res=>res.json())
         .then(data=>setTourPackages(data))
     },[])

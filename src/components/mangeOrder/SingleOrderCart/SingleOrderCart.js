@@ -6,7 +6,7 @@ const SingleOrderCart = ({order}) => {
     const { name, day, cost, img } = package_details;
     const handleDelete =id => {
         if (window.confirm("Delete the item?")) {
-            const url=`http://localhost:4000/orders/${id}`
+            const url=`https://mighty-forest-85314.herokuapp.com/orders/${id}`
         fetch(url,{
             method:'DELETE'
         })
@@ -26,7 +26,7 @@ const SingleOrderCart = ({order}) => {
 const update={
     status:"Approved"
 }
-        const url = `http://localhost:4000/ordersupdate/${id}`;
+        const url = `https://mighty-forest-85314.herokuapp.com/ordersupdate/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

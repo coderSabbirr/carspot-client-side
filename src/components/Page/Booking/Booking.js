@@ -11,7 +11,7 @@ const Booking = () => {
     const [booking, setBooking] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:4000/packages/${bookingId}`
+        const url = `https://mighty-forest-85314.herokuapp.com/packages/${bookingId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setBooking(data))
@@ -27,7 +27,7 @@ const Booking = () => {
         data.status=update;
         data.package_details=booking;
         data.email = user?.email;
-        fetch("http://localhost:4000/packages", {
+        fetch("https://mighty-forest-85314.herokuapp.com/packages", {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(data),

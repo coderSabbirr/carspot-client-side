@@ -7,7 +7,7 @@ const AddNew = () => {
     const [addnewpackages, setAddnewpackages] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:4000/addnew/newpackage')
+        fetch('https://mighty-forest-85314.herokuapp.com/addnew/newpackage')
             .then((res) => res.json())
             .then(data => setAddnewpackages(data))
     }, [])
@@ -16,7 +16,7 @@ const AddNew = () => {
     const newpackage = "newpackage"
     const onSubmit = (data) => {
         data.newpackage = newpackage;
-        fetch("http://localhost:4000/addpackages", {
+        fetch("https://mighty-forest-85314.herokuapp.com/addpackages", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

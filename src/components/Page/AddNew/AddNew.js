@@ -23,9 +23,12 @@ const AddNew = () => {
         })
             .then((res) => res.json())
             .then((result) => {
-
+              
+                    alert('added Successfully');
+                    window.location.reload();
+                
             });
-
+           
     };
     return (
         <div>

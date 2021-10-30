@@ -2,14 +2,24 @@ import React from 'react';
 import './Order.css'
 const Order = ({order}) => {
     const handleDelete =id =>{
-        const url=`http://localhost:4000/orders/${id}`
-        fetch(url,{
-            method:'DELETE'
-        })
-        .then(res => res.json())
-        .then(data =>console.log(data))
+        if (window.confirm("Delete the item?")) {
+            
+            const url=`http://localhost:4000/orders/${id}`
+            fetch(url,{
+                method:'DELETE'
+            })
+            
+            .then(res => res.json())
+            .then(data => {
+    
+            })
+            window.location.reload();
+        }
+        else{
+            return;
+        }
+       
     }
- 
     const{package_details}=order;
     const { name, day, cost, img }=package_details
     return (
@@ -23,7 +33,7 @@ const Order = ({order}) => {
                     </div>
                     <h2 className="custom_color">{name}</h2>
                     <button className="m-auto me-5 mt-5 cencel-btn" onClick={()=> handleDelete(order._id)}>Cencel Order</button>
-                    <button className="ms-5 mt-5 status-btn" >{order.status}</button>
+                    <button className=" mt-5 status-btn" >{order.status.status}</button>
                 </div>
             </div>
         </div>

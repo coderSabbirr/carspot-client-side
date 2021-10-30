@@ -1,11 +1,12 @@
-import React from 'react';
 import './SingleOrderCart.css'
 
 const SingleOrderCart = ({order}) => {
+
     const{package_details} =order;
     const { name, day, cost, img } = package_details;
     const handleDelete =id => {
-        const url=`http://localhost:4000/orders/${id}`
+        if (window.confirm("Delete the item?")) {
+            const url=`http://localhost:4000/orders/${id}`
         fetch(url,{
             method:'DELETE'
         })
@@ -13,21 +14,42 @@ const SingleOrderCart = ({order}) => {
         .then(data =>{
 
         })
+        window.location.reload();
+        }
+        else {
+            return
+        }
     }
-//    const data='updatenew'
-//     const updateOrder = id => {
 
-//         const url = `http://localhost:4000/ordersupdate/${id}`;
-//         fetch(url, {
-//             method: 'PUT',
-//             headers: {
-//                 'content-type': 'application/json'
-//             },
-//             body: JSON.stringify(data)
-//         })
-//             .then(res => res.json())
-//             .then(data => { console.log(data) })
-//             }
+  
+    const updateOrder = id => {
+const update={
+    status:"Approved"
+}
+        const url = `http://localhost:4000/ordersupdate/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(update)
+        })
+            .then(res => res.json())
+            .then(data => {
+
+               
+             })
+             window.location.reload();
+            }
+            const status=order.status.status;
+            let stutesbar=[];
+            if(order.status.status ==="Pending") {
+                stutesbar="Approve Order";
+             }
+             else{
+                stutesbar=status;
+             }
+console.log(stutesbar);
     return (
         <div className="">
             <div className="tour_Cart single-Order-Cart ">
@@ -41,7 +63,7 @@ const SingleOrderCart = ({order}) => {
                     <p className=" customer_n ">Customer Name : {order.full_name.toUpperCase()}</p>
                     <p className=" customer_e">Customer Email :{order.email}</p>
                     <button className="btn btn-danger me-4 mt-5 ms-5" onClick={()=> handleDelete(order._id)}>Delete Order</button>
-                    <button className="btn btn-primary mt-5" >Approve Order</button>
+                    <button className="btn btn-primary mt-5"  onClick={()=> updateOrder(order._id)}>{stutesbar}</button>
                 </div>
             </div>
             

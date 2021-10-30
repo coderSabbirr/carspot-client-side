@@ -17,11 +17,14 @@ const Booking = () => {
             .then(data => setBooking(data))
     }, [])
 
-    const status ="Pending"
+    // const status ="Pending"
     
     const { name, day, cost, img } = booking;
     const onSubmit = (data) => {
-        data.status=status;
+        const update={
+            status:"Pending"
+        }
+        data.status=update;
         data.package_details=booking;
         data.email = user?.email;
         fetch("http://localhost:4000/packages", {

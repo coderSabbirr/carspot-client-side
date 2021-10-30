@@ -29,9 +29,9 @@ function App() {
      <Route exact path="/packages">
           <AllPackage></AllPackage>
      </Route>
-     <Route exact path="/addpackage">
+     <PrivateRoute exact path="/addpackage">
           <AddNew></AddNew>
-     </Route>
+     </PrivateRoute>
      <PrivateRoute  path="/booking/:bookingId">
           <Booking></Booking>
      </PrivateRoute>

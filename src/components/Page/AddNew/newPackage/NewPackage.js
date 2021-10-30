@@ -4,14 +4,21 @@ import './NewPackage.css'
 const NewPackage = ({addnewpackage}) => {
 
     const handleDelete =id =>{
-        const url=`http://localhost:4000/packages/${id}`
-        fetch(url,{
-            method:'DELETE'
-        })
-        .then(res => res.json())
-        .then(data =>{
-
-        })
+        if (window.confirm("Delete the item?")) {
+            const url=`http://localhost:4000/packages/${id}`
+            fetch(url,{
+                method:'DELETE'
+            })
+            .then(res => res.json())
+            .then(data =>{
+    
+            })
+            window.location.reload();
+        }
+        else{
+            return;
+        }
+        
     }
     const{_id,img,cost,day,name,}=addnewpackage;
     return (

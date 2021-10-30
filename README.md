@@ -4,7 +4,7 @@
 
 ## 💻 Developed By
 
-![Developer PIC](https://avatars.githubusercontent.com/u/86229415?v=4)
+![Developer PIC](https://avatars.githubusercontent.com/u/86229415?s=96&v=4)
 ## Project Status: complete!
 
 

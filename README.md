@@ -12,7 +12,7 @@
 
 #### Example:   
 
-![alt text](https://i.ibb.co/mHx0mqL/screencapture-localhost-3000-home-2021-10-30-22-32-04.png)
+![alt text](https://i.ibb.co/8mRq0k9/Screenshot-149.jpg)
 
 ## Installation and Setup Instructions
 

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './PackageCart.css'
 const PackageCart = ({tourPackage}) => {
    const{_id,name,day,cost,img,rating}=tourPackage;
     return (
-        <div className="tour_Cart">
+        <div className="tour_Cart tour_Cart_single">
             <img src={img}  alt="" />
             <div className="p-2">
             <div className="d-flex">

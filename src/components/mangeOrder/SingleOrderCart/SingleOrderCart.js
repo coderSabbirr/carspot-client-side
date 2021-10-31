@@ -63,8 +63,8 @@ const update={
                     <h2 className="custom_color">{name}</h2>
                     <p className=" customer_n ">Customer Name : {order.full_name.toUpperCase()}</p>
                     <p className=" customer_e">Customer Email :{order.email}</p>
-                    <button className="btn btn-danger me-4 mt-5 ms-5" onClick={()=> handleDelete(order._id)}>Delete Order</button>
-                    <button className="btn btn-primary mt-5"  onClick={()=> updateOrder(order._id)}>{stutesbar}</button>
+                    <button className="btn btn-danger me-4 mt-5 ms-5 Delete_Order" onClick={()=> handleDelete(order._id)}>Delete Order</button>
+                    <button className="btn btn-primary updateOrder"  onClick={()=> updateOrder(order._id)}>{stutesbar}</button>
                 </div>
             </div>
             

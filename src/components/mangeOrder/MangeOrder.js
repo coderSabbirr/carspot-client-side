@@ -15,7 +15,7 @@ fetch('https://mighty-forest-85314.herokuapp.com/orders')
             <div className="our_package-img">
                <h2> Manage All Orders</h2>
             </div>
-            <div className="container">
+            <div className="container mange_ordermain">
            <div className="mange-order">
            {
                 Orders.map(order =><SingleOrderCart

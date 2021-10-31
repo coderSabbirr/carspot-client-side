@@ -13,8 +13,35 @@
   color:rgb(0, 153, 255);
   
 }
-@media only screen and (max-width: 688px) {
+.updateOrder{
+  margin-top: 3rem;
+}
+
+@media only screen and (max-width: 400px) {
   .single-Order-Cart {
      margin-bottom: 20px;
   }
+  .updateOrder {
+    margin-top:10px;
+    
+  }
+  .updateOrder,.Delete_Order {
+    
+    margin-left: 95px !important;
+    
+  }
 }
+@media screen and (min-device-width: 401px) and (max-device-width: 688px) {
+  .single-Order-Cart {
+    width: 350px !important;
+    margin-left: -4px !important;
+  }
+  
+  .single-Order-Cart img {
+    width: 347px !important;
+  }
+ 
+    
+}
+    
+  

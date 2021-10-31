@@ -1,5 +1,5 @@
 .tour_Cart {
-    margin: 20px;
+    
     margin-bottom: 40px;
     width:370px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -28,8 +28,36 @@
 width: 370px;
 height: 225px;
 }
-@media only screen and (max-width: 688px) {
+@media only screen and (max-width: 400px) {
     .tour_Cart{
-       margin:12px
+       margin:10px
     }
+    .tour_Cart {
+        width:320px;
+        
+        height: 430px;
+        
+    }
+    .tour_Cart img {
+        width: 320px;
+        height: 200px;
+        }
+        
   }
+  @media screen and (min-device-width: 401px) and (max-device-width: 688px) { 
+   
+    .tour_Cart{
+        margin-left:30px
+     }
+     .tour_Cart {
+        width:350px;
+        
+        height: 430px;
+        
+    }
+    .tour_Cart img {
+        width: 350px;
+        height: 200px;
+        }
+        
+}

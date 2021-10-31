@@ -28,9 +28,43 @@
     text-align: center;
     padding-top: 50px;
 }
-@media only screen and (max-width: 688px) {
+@media only screen and (max-width: 400px) {
     .booking-sec{
         display: flex;
         flex-direction: column;
+    }
+
+    .shipping-form{
+        width: 320px;
+        margin-right:100px;
+        margin-left: -.1px !important;
+    }
+    .shipping-form input{
+        margin-left: 10px;
+    }
+    .submit-btn {
+        margin-left: 80px !important;
+       
+        
+    }
+  }
+
+  @media screen and (min-device-width: 401px) and (max-device-width: 688px) {
+    .booking-sec{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .shipping-form{
+        width: 350px;
+        margin-left: 20px !important;
+    }
+    .shipping-form input{
+        margin-left: 25px;
+    }
+    .submit-btn {
+        margin-left: 100px !important;
+       
+        
     }
   }

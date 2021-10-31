@@ -3,13 +3,31 @@
  
     margin:10px
 }
+.addnewpackage{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 242px;
+    padding-top: 9px;
+    padding-left: 5px;
+}
 .addnewpackage img{
     width: 350px;
 }
-@media only screen and (max-width: 688px) {
+
+@media only screen and (max-width: 400px) {
     .addnewpackage {
         display:flex;
         flex-direction: column;
+        height: 430px !important;
+    }
+    .addnewpackage img {
+        width:305px !important;
     }
     
+  }
+  @media screen and (min-device-width: 401px) and (max-device-width: 688px) {
+    .addnewpackage {
+        display:flex;
+        flex-direction: column;
+        height: 430px;
+    }
   }

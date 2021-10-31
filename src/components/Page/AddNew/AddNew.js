@@ -36,7 +36,7 @@ const AddNew = () => {
                 <h2>Add A New Package</h2>
             </div>
             <div className="d-flex container addnew-packge">
-                <div>
+                <div className="new_cart">
                     {
                         addnewpackages.map(addnewpackage => <NewPackage
                             addnewpackage={addnewpackage}

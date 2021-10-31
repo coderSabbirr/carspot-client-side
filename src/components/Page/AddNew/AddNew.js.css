@@ -1,6 +1,11 @@
 .add-form {
     margin-left: 30px;
 }
+.new_cart {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 246px;
+    border: 0 !important;
+}
 @media only screen and (max-width: 688px) {
     .addnew-packge {
        display: flex !important;
@@ -9,5 +14,9 @@
     .shipping-form{
         margin-left:-2% !important ;
         margin-top: 50px !important;
+    }
+    .new_cart {
+        
+        height: 430px;
     }
   }

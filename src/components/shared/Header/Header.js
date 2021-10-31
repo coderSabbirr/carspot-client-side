@@ -38,12 +38,12 @@ const Header = () => {
         </li>
         <li className="user">
           {user?.photoURL?
-           <img className="px-2 py-2 user" src={user?.photoURL} alt="" />:
-          <img className="px-2 py-2" src="http://amentotech.com/projects/doctreat/wp-content/themes/doctreat/images/user.png" alt="" />
+           <img className="px-2  user" src={user?.photoURL} alt="" />:
+          <img className="px-2 " src="https://i.ibb.co/5r8HpR3/user-1.png" alt="" />
           }
         </li>
         <li className=" user-name">{user?.displayName}</li>
-        {user?.displayName?
+        {user?.email?
         <li className="mx-4">
         <button className="custom-login-btn custom-btn-logout " onClick={logOut} >Logout</button>
       </li>:

@@ -36,6 +36,7 @@ const Booking = () => {
           .then((result) => {
               
           });
+          alert("Order successfull")
        
       };
     

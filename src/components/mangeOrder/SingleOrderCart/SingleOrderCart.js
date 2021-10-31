@@ -49,7 +49,6 @@ const update={
              else{
                 stutesbar=status;
              }
-console.log(stutesbar);
     return (
         <div className="">
             <div className="tour_Cart single-Order-Cart ">

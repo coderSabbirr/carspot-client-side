@@ -24,7 +24,7 @@ const Login = () => {
     
     return (
         <div className="text-center mt-5 login">
-            <p className="login-btn"><img src="https://i.ibb.co/xCQCnvY/5a35540277d9e6-8445514415134443544909.png" alt="" /><button  onClick={handalGoogleLogin}>Login with google</button></p>
+            <p className="login-btn" onClick={handalGoogleLogin}><img src="https://i.ibb.co/xCQCnvY/5a35540277d9e6-8445514415134443544909.png" alt="" /><button >Login with google</button></p>
         </div>
     );
 };

@@ -11,9 +11,9 @@ const NewPackage = ({addnewpackage}) => {
             })
             .then(res => res.json())
             .then(data =>{
-    
+                window.location.reload();
             })
-            window.location.reload();
+           
         }
         else{
             return;

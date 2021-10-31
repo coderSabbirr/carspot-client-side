@@ -1,7 +1,7 @@
 import './SingleOrderCart.css'
 
 const SingleOrderCart = ({order}) => {
-
+    
     const{package_details} =order;
     const { name, day, cost, img } = package_details;
     const handleDelete =id => {
@@ -12,23 +12,24 @@ const SingleOrderCart = ({order}) => {
         })
         .then(res => res.json())
         .then(data =>{
-
+            window.location.reload();
         })
         
         }
         else {
             return
         }
-       ;
+       
     }
 
   
-    const updateOrder = id => {
+    const updateOrder = (id) => {
+
 const update={
     status:"Approved"
 }
         const url = `https://mighty-forest-85314.herokuapp.com/ordersupdate/${id}`;
-        fetch(url, {
+        fetch(url , {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -37,10 +38,10 @@ const update={
         })
             .then(res => res.json())
             .then(data => {
-
-               
+                window.location.reload();
+                
              })
-            
+             
             }
             const status=order.status.status;
             let stutesbar=[];

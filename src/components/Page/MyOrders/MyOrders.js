@@ -17,24 +17,26 @@ const MyOrders = () => {
 
 
     return (
-        <div>
-            <div className="our_package-img">
-                <h2>My Order</h2>
+            <div>
+                <div className="our_package-img">
+                    <h2>My Order</h2>
+                </div>
+                <div className="container">
+                <div className="myorders mt-5">
+                    {
+    
+                        myOrders?.map(order => <Order
+                            order={order}
+                            key={order._id}
+                        ></Order>)
+    
+                    }
+                </div>
             </div>
-            <div className="container">
-            <div className="myorders mt-5">
-                {
-
-                    myOrders?.map(order => <Order
-                        order={order}
-                        key={order._id}
-                    ></Order>)
-
-                }
             </div>
-        </div>
-        </div>
-    );
+        );
+    
+    
 };
 
 export default MyOrders;

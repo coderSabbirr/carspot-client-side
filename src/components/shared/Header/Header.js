@@ -7,6 +7,7 @@ import useAuth from '../../../hooks/useAuth';
 import './Header.css'
 const Header = () => {
     const {user,logOut}=useAuth()
+    console.log(user)
     return (
 
 
@@ -38,7 +39,7 @@ const Header = () => {
         </li>
         <li className="user">
           {user?.photoURL?
-           <img className="px-2  user" src={user?.photoURL} alt="" />:
+           <img className="px-2  user" src={user.photoURL} alt="" />:
           <img className="px-2 " src="https://i.ibb.co/5r8HpR3/user-1.png" alt="" />
           }
         </li>

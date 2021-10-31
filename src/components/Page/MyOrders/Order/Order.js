@@ -11,7 +11,7 @@ const Order = ({order}) => {
             
             .then(res => res.json())
             .then(data => {
-    
+                window.location.reload();
             })
             
         }

@@ -14,11 +14,12 @@ const SingleOrderCart = ({order}) => {
         .then(data =>{
 
         })
-        window.location.reload();
+        
         }
         else {
             return
         }
+       ;
     }
 
   
@@ -39,7 +40,7 @@ const update={
 
                
              })
-             window.location.reload();
+            
             }
             const status=order.status.status;
             let stutesbar=[];

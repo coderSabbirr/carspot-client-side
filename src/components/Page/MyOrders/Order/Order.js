@@ -1,7 +1,7 @@
 import React from 'react';
 import './Order.css'
 const Order = ({order}) => {
-    const handleDelete =id =>{
+    const handleDelete =(id,e) =>{
         if (window.confirm("Delete the item?")) {
             
             const url=`https://mighty-forest-85314.herokuapp.com/orders/${id}`
@@ -13,7 +13,7 @@ const Order = ({order}) => {
             .then(data => {
     
             })
-            window.location.reload();
+            
         }
         else{
             return;

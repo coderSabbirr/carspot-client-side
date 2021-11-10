@@ -1,35 +1,37 @@
-import './SingleOrderCart.css'
+import './SingleOrderCart.css';
 
-const SingleOrderCart = ({order}) => {
-    
-    const{package_details} =order;
-    const { name, day, cost, img } = package_details;
-    const handleDelete =id => {
+const SingleOrderCart = ({ order,Orders }) => {
+
+    const{full_name,address,city,email,phone}=order;
+    const{name,price}=order.package_details;
+
+
+    const handleDelete = id => {
         if (window.confirm("Delete the item?")) {
-            const url=`https://mighty-forest-85314.herokuapp.com/orders/${id}`
-        fetch(url,{
-            method:'DELETE'
-        })
-        .then(res => res.json())
-        .then(data =>{
-            window.location.reload();
-        })
-        
+            const url = `http://localhost:4000/orders/${id}`
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    window.location.reload();
+                })
+
         }
         else {
             return
         }
-       
+
     }
 
-  
+
     const updateOrder = (id) => {
 
-const update={
-    status:"Approved"
-}
-        const url = `https://mighty-forest-85314.herokuapp.com/ordersupdate/${id}`;
-        fetch(url , {
+        const update = {
+            status: "Approved"
+        }
+        const url = `http://localhost:4000/ordersupdate/${id}`;
+        fetch(url, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -39,36 +41,35 @@ const update={
             .then(res => res.json())
             .then(data => {
                 window.location.reload();
-                
-             })
-             
-            }
-            const status=order.status.status;
-            let stutesbar=[];
-            if(order.status.status ==="Pending") {
-                stutesbar="Approve Order";
-             }
-             else{
-                stutesbar=status;
-             }
+
+            })
+
+    }
+    const status = order.status.status;
+    let stutesbar = [];
+    if (order.status.status === "Pending") {
+        stutesbar = "Approve";
+    }
+    else {
+        stutesbar = status;
+    }
+
     return (
-        <div className="">
-            <div className="tour_Cart single-Order-Cart ">
-                <img src={img} alt="" />
-                <div className="p-2">
-                    <div className="d-flex">
-                        <h5 className="me-5">${cost}/Per Person</h5>
-                        <h5 >{day}</h5>
-                    </div>
-                    <h2 className="custom_color">{name}</h2>
-                    <p className=" customer_n ">Customer Name : {order.full_name.toUpperCase()}</p>
-                    <p className=" customer_e">Customer Email :{order.email}</p>
-                    <button className="btn btn-danger me-4 mt-5 ms-5 Delete_Order" onClick={()=> handleDelete(order._id)}>Delete Order</button>
-                    <button className="btn btn-primary updateOrder"  onClick={()=> updateOrder(order._id)}>{stutesbar}</button>
-                </div>
-            </div>
+        <tbody>
+        <tr>
+            {/* <th scope="row">1</th> */}
+            <td>{full_name}</td>
+            <td>{name}</td>
+            <td>${price}</td>
+            <td>{email}</td>
+            <td>{address},{city}</td>
+            <td>{phone}</td>
+            <td><button className="btn btn-primary "  onClick={()=> updateOrder(order._id)}>{stutesbar}</button></td>
+            <td><i onClick={()=> handleDelete(order._id)} className="fas fa-trash-alt delete-button text-center"></i></td>
             
-        </div>
+                    
+        </tr>
+    </tbody>
     );
 };
 

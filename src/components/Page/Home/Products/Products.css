@@ -1,0 +1,21 @@
+.cars-custom {
+  color: red;
+}
+.heading-color {
+  font-size: 28px;
+  font-weight: 700;
+}
+.Products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.products_cart {
+  justify-content: center;
+  margin-top: 60px;
+}
+@media only screen and (max-width: 688px) {
+  .Products {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

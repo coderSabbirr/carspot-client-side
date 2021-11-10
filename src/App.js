@@ -1,18 +1,18 @@
 
-import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './components/context/AuthProvider';
 import MangeOrder from './components/mangeOrder/MangeOrder';
 import AddNew from './components/Page/AddNew/AddNew';
+import AllProducts from './components/Page/AllProducts/AllProducts/AllProducts';
 import Booking from './components/Page/Booking/Booking';
-import Home from './components/Page/Home/Home'
+import Home from './components/Page/Home/Home';
 import Login from './components/Page/Login/Login';
 import MyOrders from './components/Page/MyOrders/MyOrders';
+import NotFound from './components/Page/NotFound/NotFound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Footer from './components/shared/Footer/Footer';
 import Header from './components/shared/Header/Header';
-import AllPackage from './components/TourPackage/AllPackage';
-import NotFound from './components/Page/NotFound/NotFound'
 
 function App() {
   return (
@@ -26,8 +26,8 @@ function App() {
      <Route exact path="/home">
           <Home></Home>
      </Route>
-     <Route exact path="/packages">
-          <AllPackage></AllPackage>
+     <Route exact path="/products">
+          <AllProducts></AllProducts>
      </Route>
      <PrivateRoute exact path="/addpackage">
           <AddNew></AddNew>

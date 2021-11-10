@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
-import NewPackage from './newPackage/NewPackage';
-import './AddNew.js.css'
+import './AddNew.js.css';
 
 const AddNew = () => {
     const [addnewpackages, setAddnewpackages] = useState([])
 
     useEffect(() => {
-        fetch('https://mighty-forest-85314.herokuapp.com/addnew/newpackage')
+        fetch('http://localhost:4000/products')
             .then((res) => res.json())
             .then(data => setAddnewpackages(data))
     }, [])
@@ -37,7 +36,7 @@ const AddNew = () => {
             </div>
             <div className="d-flex container addnew-packge">
                 <div className="new_cart">
-                    {
+                    {/* {
                         addnewpackages.map(addnewpackage => <NewPackage
                             addnewpackage={addnewpackage}
                             key={addnewpackage._id}
@@ -45,7 +44,7 @@ const AddNew = () => {
                         >
 
                         </NewPackage>)
-                    }
+                    } */}
                 </div>
                 <div >
                     <form className="shipping-form add-form " onSubmit={handleSubmit(onSubmit)} >

@@ -1,70 +1,74 @@
 .shipping-form input {
-    margin-bottom: 10px;
-    width: 300px;
-    margin-left: 50px;
-    margin-top: 30px;
+  margin-bottom: 10px;
+  width: 300px;
+  margin-left: 50px;
+  margin-top: 30px;
 }
 .shipping-form {
-    margin-left: 60%;
-    width: 400px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-left: 40%;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .submit-btn {
-    background-color: #FF7F47;
-    border: 0;
-    width: 150px !important;
-    padding: 10px;
-    margin-left: 120px !important;
-    border-radius: 10px;
-    color: white;
-    font-weight: 500;
-    
+  background-color: #ff7f47;
+  border: 0;
+  width: 150px !important;
+  padding: 10px;
+  margin-left: 120px !important;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
 }
-.booking-sec{
-    margin-top:100px;
+.booking-sec {
+  margin-top: 100px;
 }
-.Booking_heading{
-    color: white;
-    text-align: center;
-    padding-top: 50px;
+.Booking_heading {
+  color: white;
+  text-align: center;
+  padding-top: 50px;
 }
+.order-summary {
+  max-width: 800px;
+  height: 80%;
+}
+/* .order-summary img {
+  height: 220px;
+
+} */
+
 @media only screen and (max-width: 400px) {
-    .booking-sec{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .shipping-form{
-        width: 320px;
-        margin-right:100px;
-        margin-left: -.1px !important;
-    }
-    .shipping-form input{
-        margin-left: 10px;
-    }
-    .submit-btn {
-        margin-left: 80px !important;
-       
-        
-    }
+  .booking-sec {
+    display: flex;
+    flex-direction: column;
   }
 
-  @media screen and (min-device-width: 401px) and (max-device-width: 688px) {
-    .booking-sec{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .shipping-form{
-        width: 350px;
-        margin-left: 20px !important;
-    }
-    .shipping-form input{
-        margin-left: 25px;
-    }
-    .submit-btn {
-        margin-left: 100px !important;
-       
-        
-    }
+  .shipping-form {
+    width: 320px;
+    margin-right: 100px;
+    margin-left: -0.1px !important;
   }
+  .shipping-form input {
+    margin-left: 10px;
+  }
+  .submit-btn {
+    margin-left: 80px !important;
+  }
+}
+
+@media screen and (min-device-width: 401px) and (max-device-width: 688px) {
+  .booking-sec {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shipping-form {
+    width: 350px;
+    margin-left: 20px !important;
+  }
+  .shipping-form input {
+    margin-left: 25px;
+  }
+  .submit-btn {
+    margin-left: 100px !important;
+  }
+}

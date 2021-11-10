@@ -1,11 +1,11 @@
 import React from 'react';
-import './NewPackage.css'
+import './NewPackage.css';
 
 const NewPackage = ({addnewpackage}) => {
 
     const handleDelete =id =>{
         if (window.confirm("Delete the item?")) {
-            const url=`https://mighty-forest-85314.herokuapp.com/packages/${id}`
+            const url=`http://localhost:4000/products/${id}`
             fetch(url,{
                 method:'DELETE'
             })

@@ -1,0 +1,46 @@
+.book_now {
+  background-color: transparent;
+  padding: 10px 25px;
+  text-align: center;
+  background-color: #ff7f47;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  border: 0;
+  margin-left: 30%;
+  text-decoration: none;
+}
+
+.vehicle-card {
+  width: 400px;
+  margin: 10px;
+}
+.vehicle-card .price {
+  font-size: 1.25rem;
+}
+.vehicle-card h2 {
+  font-size: 1rem;
+  color: rgb(26, 25, 25);
+}
+
+.vehical-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.vehicle-card-location-icon {
+  display: inline-block;
+  position: relative;
+  width: 0.4375rem;
+  height: 0.625rem;
+  margin-right: 0.3125rem;
+}
+.vehicle-card-location {
+  margin-bottom: 1.0625rem;
+  font-size: 0.6875rem;
+}
+.since {
+  font-weight: 600;
+  line-height: 20px;
+}

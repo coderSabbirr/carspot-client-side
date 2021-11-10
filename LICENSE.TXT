@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) Tour X
+Copyright (c) CarSpot
 
 All rights reserved.
 

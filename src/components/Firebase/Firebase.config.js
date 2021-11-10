@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDp3WTZDZPwPlDFdJWobEiF1ZKWzLdUyek",
-    authDomain: "tourx-bd.firebaseapp.com",
-    projectId: "tourx-bd",
-    storageBucket: "tourx-bd.appspot.com",
-    messagingSenderId: "942472706462",
-    appId: "1:942472706462:web:4208973c0eb90d82c77e8f"
-  };
+  apiKey: "AIzaSyDDNlGvTrhuC0K3KFTevm6xKK8shDhnu4Q",
+  authDomain: "car-spot-bd.firebaseapp.com",
+  projectId: "car-spot-bd",
+  storageBucket: "car-spot-bd.appspot.com",
+  messagingSenderId: "473992305338",
+  appId: "1:473992305338:web:1443ad1d2cc06641470083"
+};
 
   export default firebaseConfig;

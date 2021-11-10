@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import './Header.css';
 
 
 
-import './Header.css'
 const Header = () => {
     const {user,logOut}=useAuth()
-    console.log(user)
     return (
 
 
@@ -15,7 +14,7 @@ const Header = () => {
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container p-4">
   <NavLink className="navbar-brand" to="/">
-  <img src="https://i.ibb.co/FqBcMrw/logo-2.png" alt="" className="d-inline-block align-text-top logo" />
+  <img src="https://i.ibb.co/wzp83xq/logo-2.png" alt="" className="d-inline-block align-text-top logo" />
     </NavLink>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>

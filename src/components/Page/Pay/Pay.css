@@ -1,0 +1,8 @@
+.pay {
+  margin: 15%;
+}
+@media only screen and (max-width: 688px) {
+  .pay img {
+    width: 100%;
+  }
+}

@@ -1,90 +1,115 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
 import useAuth from "../../../../hooks/useAuth";
+import MangeOrders from "../../../mangeOrder/MangeOrder";
+import AddNew from "../../AddNew/AddNew";
+import MangeProducts from "../../MangeProducts/MangeProducts";
 import MyOrders from "../../MyOrders/MyOrders";
+import AddReviews from "../../MyReviews/AddReviews/AddReviews";
+import MyReviews from "../../MyReviews/MyReviews/MyReviews.js";
+import Pay from "../../Pay/Pay";
+import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import "./Dashboard.css";
-// import AddServices from "./../AddServices/AddServices";
-// import Review from "./../Review/Review";
-// import MyBookings from "./../MyBookings/MyBookings";
-// import MakeAdmin from "./../MakeAdmin/MakeAdmin";
-// import ManageServices from "./../ManageServices/ManageServices";
-// import useFirebase from "./../../Hook/useFirebase";
+
 
 const Dashbaord = () => {
-  const {user,logOut}=useAuth()
+  const { user, logOut } = useAuth()
   let { path, url } = useRouteMatch();
-  //   const { user } = useFirebase();
-  const [isAdmi, setIsAdmin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
-  //   useEffect(() => {
-  //     fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         if (data[0]?.role === "admin") {
-  //           setIsAdmin(true);
-  //         } else {
-  //           setIsAdmin(false);
-  //         }
-  //       });
-  //   }, [user?.email]);
-  console.log(isAdmi);
-  console.log()
+  useEffect(() => {
+    fetch(`http://localhost:4000/checkAdmin/${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data[0]?.role === "admin") {
+          setIsAdmin(false);
+        } else {
+          setIsAdmin(true);
+        }
+      });
+  }, [user?.email]);
+
   return (
     <div>
       <div className="dashboard-container ">
         <div className="row">
-          <div className="col-md-3 ">
+          <div className="col-md-2 ">
             <div className="dashboard">
-              <h5 className="dashboard-heading">Dashboard</h5>
+              <Link to={url}>
+                <h5 className="dashboard-heading">Dashboard</h5>
+              </Link>
               <div className="dashboard-all">
-                <Link to={`${url}/orders`}>
-                  <li className="dashboard-menu ">My Orders</li>
-                </Link>
-                <Link to={`${url}/review`}>
-                  <li className="dashboard-menu ">Review</li>
-                </Link>
-                <div className="admin-dashboard">
+                <>
+                  <Link to={`${url}/myorder`}>
+                    <li className="dashboard-menu">My Orders</li>
+                  </Link>
+                  <Link to={`${url}/pay`}>
+                    <li className="dashboard-menu">Payment Option</li>
+                  </Link>
+                  <Link to={`${url}/addreview`}>
+                    <li className="dashboard-menu">Add Review</li>
+                  </Link>
+                  <Link to={`${url}/myreview`}>
+                    <li className="dashboard-menu">My Review</li>
+                  </Link>
+                </>
+                <>
+
                   <Link to={`${url}/orderslist`}>
-                    <li className="dashboard-menu ">Orders list</li>
+                    <li className="dashboard-menu">  Orders list</li>
                   </Link>
                   <Link to={`${url}/addproduct`}>
                     <li className="dashboard-menu">Add Prodcuts</li>
                   </Link>
+                  <Link to={`${url}/mangeproducts`}>
+                    <li className="dashboard-menu">Manage Cars</li>
+                  </Link>
                   <Link to={`${url}/makeAdmin`}>
                     <li className="dashboard-menu">Make Admin</li>
                   </Link>
-                  <Link to={`${url}/manageServices`}>
-                    <li className="dashboard-menu">Manage Service</li>
-                  </Link>
-                </div>
+
+
+                </>
                 <Link>
-                <li className="dashboard-menu btn btn-primary"  onClick={logOut}> Logout</li>
+                  <li className="dashboard-menu logout-dashboard" onClick={logOut}> Logout</li>
                 </Link>
               </div>
             </div>
           </div>
           <div className="col-md-9">
             <Switch>
-              <Route exact path={path}>
-                <MyOrders></MyOrders>
-              </Route>
-              <Route exact path={`${path}/orders`}>
-                <MyOrders></MyOrders>
-              </Route>
-              <Route exact path={`${path}`}>
 
+              <Route path={`${path}/myorder`}>
+                <MyOrders></MyOrders>
               </Route>
-              {/* 
-            
-              <Route exact path={`${path}/makeAdmin`}>
+              <Route path={`${path}/addreview`}>
+                <AddReviews></AddReviews>
+              </Route>
+              <Route path={`${path}/myreview`}>
+                <MyReviews></MyReviews>
+              </Route>
+              <Route path={`${path}/pay`}>
+                <Pay></Pay>
+              </Route>
+              <Route path={`${path}/orderslist`}>
+                <MangeOrders></MangeOrders>
+              </Route>
+              <Route path={`${path}/orderslist`}>
+                <MangeOrders></MangeOrders>
+              </Route>
+              <Route path={`${path}/addproduct`}>
+                <AddNew></AddNew>
+              </Route>
+              <Route path={`${path}/mangeproducts`}>
+                <MangeProducts></MangeProducts>
+              </Route>
+              <Route path={`${path}/makeAdmin`}>
                 <MakeAdmin></MakeAdmin>
               </Route>
-              <Route exact path={`${path}/addService`}>
-                <AddServices></AddServices>
-              </Route>
-              <Route exact path={`${path}/manageServices`}>
-                <ManageServices></ManageServices>
-              </Route> */}
+
+
+
+
             </Switch>
 
           </div>

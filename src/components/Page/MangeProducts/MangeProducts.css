@@ -1,0 +1,12 @@
+.mangeProducts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 30px;
+  margin-right: 30px;
+}
+@media only screen and (max-width: 688px) {
+  .mangeProducts {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

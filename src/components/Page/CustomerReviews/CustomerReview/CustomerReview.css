@@ -1,0 +1,15 @@
+.review-card img {
+  width: 80px;
+  margin: auto;
+  border-radius: 50%;
+}
+.review-card {
+  text-align: center;
+  width: 500px;
+}
+.review-card h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  color: rgb(160, 18, 105);
+}

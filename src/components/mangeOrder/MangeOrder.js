@@ -12,7 +12,7 @@ const MangeOrder = () => {
     }, [])
     return (
         <div>
-            <div className="our_package-img">
+            <div className="our_package-img mb-5">
                 <h2> All Orders</h2>
             </div>
             <div className="container mange_ordermain">

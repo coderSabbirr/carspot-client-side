@@ -10,7 +10,6 @@ const Login = () => {
    
     const location = useLocation();
     const history = useHistory();
-    const redirect_uri= location.state?.from || '/home'
 
 
 
@@ -27,17 +26,7 @@ const handleLoginSubmit = e => {
     e.preventDefault();
 }
 
-// const handleGoogleSignIn = () => {
-//     signInUsingGoogle()
-//     .then(result => {
-//         history.push(redirect_uri);
-//     })
-//     .catch(error => {
-//         setError("popup-closed you");
-//     })
-    
 
-// }
 const handleGoogleSignIn = () => {
     signInWithGoogle(location, history)
 }

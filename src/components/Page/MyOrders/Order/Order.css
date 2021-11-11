@@ -20,3 +20,19 @@
 .my-order-card h2 {
   font-size: 1rem;
 }
+.order-cencel {
+  background-color: rgb(230, 64, 14);
+  border: 0;
+  color: white;
+  font-weight: 500;
+  border-radius: 25px;
+  padding: 4px 20px;
+}
+.order-status {
+  background-color: rgb(14, 198, 230);
+  border: 0;
+  color: white;
+  font-weight: 500;
+  border-radius: 25px;
+  padding: 4px 25px;
+}

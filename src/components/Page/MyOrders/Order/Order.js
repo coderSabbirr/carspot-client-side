@@ -33,7 +33,7 @@ const Order = ({ order }) => {
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
-                                <p className="since">{since}</p>
+                                <p className="vehicel-since">{since}</p>
                                 <div className="vehical-header">
                                     <h2 className="card-title">{name}</h2>
                                     <h5 className="price">${price}</h5>
@@ -45,8 +45,8 @@ const Order = ({ order }) => {
                                     {location}
                                 </section>
                                <section>
-                               <button className="cencel-btn" onClick={() => handleDelete(order._id)}>Cencel Order</button>
-                                <button className=" ms-4 status-btn" >{order.status.status}</button>
+                               <button className="order-cencel" onClick={() => handleDelete(order._id)}>Cencel Order</button>
+                                <button className=" ms-4 order-status" >{order.status.status}</button>
                                </section>
                             </div>
                         </div>

@@ -16,11 +16,11 @@ const Products = () => {
                 <h2 className="heading-color text-center">Latest <span className="cars-custom">Used Cars</span> For Sale</h2>
                 <div className="products_cart card-group row-cols-2 row-cols-md-4 gap-3">
                     {
-                        products?.slice(0, 6).map(product =><SingleProducts
-                        product={product}
+                        products?.slice(0, 6).map(product => <SingleProducts
+                            product={product}
                         >
 
-                        </SingleProducts> )
+                        </SingleProducts>)
                     }
                 </div>
             </div>

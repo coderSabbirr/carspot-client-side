@@ -1,0 +1,14 @@
+.my-review {
+  max-width: 30rem;
+  margin: 10px;
+}
+.my-review-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media only screen and (max-width: 688px) {
+  .my-review-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -20,21 +20,24 @@ const Header = () => {
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul className="navbar-nav">
+      <ul className="navbar-nav ">
         <li className="nav-item">
         <NavLink className="nav-link active" aria-current="page" to="/home">Home</NavLink>
         </li>
         <li className="nav-item">
         <NavLink className="nav-link" to="/products">Our Products</NavLink>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
         <NavLink className="nav-link" to="/orders">My Orders</NavLink>
-        </li>
+        </li> */}
         <li className="nav-item">
         <NavLink className="nav-link" to="/mangeorders">Manage All Orders</NavLink>
         </li>
         <li className="nav-item">
         <NavLink className="nav-link" to="/addpackage">Add A New Package</NavLink>
+        </li>
+        <li className="nav-item">
+        <NavLink className="nav-link" to="/dashboard">Dashboard </NavLink>
         </li>
         <li className="user">
           {user?.photoURL?

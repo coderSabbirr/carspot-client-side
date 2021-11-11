@@ -17,6 +17,7 @@ const AllProducts = () => {
                     {
                         products?.map(product =><SingleProducts
                         product={product}
+                        key={product._id}
                         >
 
                         </SingleProducts> )

@@ -17,13 +17,13 @@ const MangeOrder = () => {
             </div>
             <div className="container mange_ordermain">
                 <div className="mange-order table-responsive">
-                    <table class="table table-bordered border-primary ">
+                    <table class="table table-bordered border-dark ">
                         <thead class="table-dark ">
                             <tr>
                                 <th scope="col">Customer Name</th>
                                 <th scope="col">Product Name</th>
                                 <th scope="col">Price</th>
-                                <th scope="col">Email</th>
+                                <th scope="col">Customer Email</th>
                                 <th scope="col">Address</th>
                                 <th scope="col">Phone</th>
                                 <th scope="col">Statues</th>

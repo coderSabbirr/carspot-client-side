@@ -1,31 +1,86 @@
-
-import { useHistory,useLocation } from 'react-router-dom';
+import { Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { NavLink, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import './login.css'
+import './login.css';
 
 const Login = () => {
-    const{signInUsingGoogle,setError}=useAuth();
+    const [loginData, setLoginData] = useState({});
+    const{signInWithGoogle,loginUser,isLoading }=useAuth();
    
     const location = useLocation();
     const history = useHistory();
     const redirect_uri= location.state?.from || '/home'
 
-    const handalGoogleLogin = () => {
-       
-        signInUsingGoogle()
-        .then(result=> {
-        history.push(redirect_uri);
-})
-.catch(error=>{
-    setError("popup-closed you");
-  })
-  
-    }
+
+
+const handleOnChange = e => {
+    const field = e.target.name;
+    const value = e.target.value;
+    const newLoginData = { ...loginData };
+    newLoginData[field] = value;
+    setLoginData(newLoginData);
+}
+const handleLoginSubmit = e => {
+    loginUser(loginData.email, loginData.password, location, history);
     
+    e.preventDefault();
+}
+
+// const handleGoogleSignIn = () => {
+//     signInUsingGoogle()
+//     .then(result => {
+//         history.push(redirect_uri);
+//     })
+//     .catch(error => {
+//         setError("popup-closed you");
+//     })
+    
+
+// }
+const handleGoogleSignIn = () => {
+    signInWithGoogle(location, history)
+}
+    
+  
     return (
-        <div className="text-center mt-5 login">
-            <p className="login-btn" onClick={handalGoogleLogin}><img src="https://i.ibb.co/xCQCnvY/5a35540277d9e6-8445514415134443544909.png" alt="" /><button >Login with google</button></p>
-        </div>
+        <Container className="text-center">
+        <Grid container spacing={2}>
+            <Grid item sx={{ mt: 8 }} xs={12} md={6}>
+            {isLoading && <CircularProgress />}
+                <Typography variant="body1" gutterBottom>Login</Typography>
+                <form onSubmit={handleLoginSubmit}>
+                    <TextField
+                        sx={{ width: '75%', m: 1 }}
+                        id="standard-basic"
+                        label="Your Email"
+                        name="email"
+                        onChange={handleOnChange}
+                        variant="standard" />
+                    <TextField
+                        sx={{ width: '75%', m: 1 }}
+                        id="standard-basic"
+                        label="Your Password"
+                        type="password"
+                        name="password"
+                        onChange={handleOnChange}
+                        variant="standard" />
+
+                    <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
+                    <NavLink
+                        style={{ textDecoration: 'none' }}
+                        to="/register">
+                        <Button variant="text">New User? Please Register</Button>
+                    </NavLink>
+                    {/* {user?.email && <Alert severity="success">Login successfully!</Alert>}
+                    {authError && <Alert severity="error">{authError}</Alert>} */}
+                </form>
+                <p>------------------------</p>
+                <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
+            </Grid>
+         
+        </Grid>
+    </Container>
     );
 };
 

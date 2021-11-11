@@ -1,0 +1,16 @@
+.myorders {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.my-order-card {
+  margin-left: 10px;
+}
+@media only screen and (max-width: 688px) {
+  .myorders {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .my-order-card {
+    margin-left: 0px;
+  }
+}

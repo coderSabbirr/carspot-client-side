@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './components/context/AuthProvider';
 import MangeOrder from './components/mangeOrder/MangeOrder';
-import AddNew from './components/Page/AddNew/AddNew';
 import AllProducts from './components/Page/AllProducts/AllProducts/AllProducts';
 import Booking from './components/Page/Booking/Booking';
+import Dashboard from './components/Page/Dashboard/Dashboard/Dashboard';
+import MakeAdmin from './components/Page/Dashboard/MakeAdmin/MakeAdmin';
 import Home from './components/Page/Home/Home';
 import Login from './components/Page/Login/Login';
-import MyOrders from './components/Page/MyOrders/MyOrders';
+import Register from './components/Page/Login/Register/Register';
 import NotFound from './components/Page/NotFound/NotFound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Footer from './components/shared/Footer/Footer';
@@ -29,21 +30,31 @@ function App() {
      <Route exact path="/products">
           <AllProducts></AllProducts>
      </Route>
-     <PrivateRoute exact path="/addpackage">
+     {/* <PrivateRoute exact path="/addpackage">
           <AddNew></AddNew>
+     </PrivateRoute> */}
+     <PrivateRoute exact path="/dashboard">
+          <Dashboard></Dashboard>
      </PrivateRoute>
      <PrivateRoute  path="/booking/:bookingId">
           <Booking></Booking>
      </PrivateRoute>
-     <PrivateRoute  path="/orders">
+     {/* <PrivateRoute  path="/orders">
           <MyOrders></MyOrders>
-     </PrivateRoute>
+     </PrivateRoute> */}
      <PrivateRoute  path="/mangeorders">
          <MangeOrder></MangeOrder>
+     </PrivateRoute>
+     <PrivateRoute  path="/makeadmin">
+        <MakeAdmin></MakeAdmin>
      </PrivateRoute>
      <Route  path="/login">
           <Login></Login>
      </Route>
+     <Route  path="/register">
+         <Register></Register>
+     </Route>
+   
      <Route  path="*">
           <NotFound></NotFound>
      </Route>

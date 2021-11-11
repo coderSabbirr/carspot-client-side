@@ -26,7 +26,7 @@ const Order = ({ order }) => {
         <div>
             <div className="">
 
-                <div className="card mb-3 order-summary">
+                <div className="card mb-3  my-order-card">
                     <div className="row g-0">
                         <div className="col-md-4">
                             <img src={img} className="img-fluid rounded-start" alt="..." />
@@ -45,8 +45,8 @@ const Order = ({ order }) => {
                                     {location}
                                 </section>
                                <section>
-                               <button className="m-auto me-5 cencel-btn" onClick={() => handleDelete(order._id)}>Cencel Order</button>
-                                <button className="  status-btn" >{order.status.status}</button>
+                               <button className="cencel-btn" onClick={() => handleDelete(order._id)}>Cencel Order</button>
+                                <button className=" ms-4 status-btn" >{order.status.status}</button>
                                </section>
                             </div>
                         </div>

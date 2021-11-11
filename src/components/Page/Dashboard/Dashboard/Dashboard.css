@@ -1,0 +1,33 @@
+.dashboard {
+  background-color: #f8f9fa;
+  height: 100vh;
+  color: white;
+  cursor: pointer;
+  width: 250px;
+  border-radius: 5px;
+}
+.dashboard-heading {
+  text-align: center;
+  color: #3a5e8e;
+  font-weight: 600;
+  padding-top: 20px;
+}
+.dashboard-menu {
+  list-style: none !important;
+  margin-top: 10px;
+  margin-left: 40px;
+  color: #3a5e8e;
+}
+.dashboard-menu:hover {
+  color: #ff7f47;
+}
+.dashboard-container a {
+  text-decoration: none !important;
+}
+.dashboard-all {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.btn {
+  color: white;
+}

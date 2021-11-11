@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
-import './AddNew.js.css';
+import './AddNew.css';
+import NewPackage from './newPackage/NewPackage';
 
 const AddNew = () => {
     const [addnewpackages, setAddnewpackages] = useState([])
@@ -12,10 +13,9 @@ const AddNew = () => {
     }, [])
 
     const { register, handleSubmit } = useForm();
-    const newpackage = "newpackage"
+    
     const onSubmit = (data) => {
-        data.newpackage = newpackage;
-        fetch("https://mighty-forest-85314.herokuapp.com/addpackages", {
+        fetch('http://localhost:4000/addpackages', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -35,33 +35,35 @@ const AddNew = () => {
                 <h2>Add A New Package</h2>
             </div>
             <div className="d-flex container addnew-packge">
+               
+                <div >
+                    <form className=" add-form " onSubmit={handleSubmit(onSubmit)} >
+
+                        <input  placeholder="Car Name" {...register("name", { required: true })} />
+                        <br />
+                        <input  placeholder="Since" {...register("since", { required: true })} />
+                        <br />
+                        <input placeholder="Price"  {...register("price", { required: true })} />
+                        <br />
+                        <input placeholder="Location"  {...register("location", { required: true })} />
+                        <br />
+                        <input placeholder="Img Link"  {...register("img", { required: true })} />
+                        <br />
+                        <input type="submit" value="Add Product" className="submit-btn" />
+                    </form>
+                </div>
                 <div className="new_cart">
-                    {/* {
-                        addnewpackages.map(addnewpackage => <NewPackage
+                    {
+                        addnewpackages?.map(addnewpackage => <NewPackage
                             addnewpackage={addnewpackage}
                             key={addnewpackage._id}
 
                         >
 
                         </NewPackage>)
-                    } */}
+                    }
                 </div>
-                <div >
-                    <form className="shipping-form add-form " onSubmit={handleSubmit(onSubmit)} >
-
-                        <input defaultValue="" placeholder="Package Name" {...register("name", { required: true })} />
-                        <br />
-                        <input defaultValue="5 Days/6 night" placeholder="Day" {...register("day", { required: true })} />
-                        <br />
-                        <input placeholder="Cost $" defaultValue="180" {...register("cost")} />
-                        <br />
-                        <input placeholder="Rating" defaultValue="8" {...register("rating")} />
-                        <br />
-                        <input placeholder="Img Link" defaultValue="" {...register("img", { required: true })} />
-                        <br />
-                        <input type="submit" value="Add Package" className="submit-btn" />
-                    </form>
-                </div>
+                
 
             </div>
         </div>

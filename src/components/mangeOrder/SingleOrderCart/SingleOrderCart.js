@@ -28,7 +28,7 @@ const SingleOrderCart = ({ order,Orders }) => {
     const updateOrder = (id) => {
 
         const update = {
-            status: "Approved"
+            status: "Shipped"
         }
         const url = `https://boiling-meadow-81562.herokuapp.com/ordersupdate/${id}`;
         fetch(url, {

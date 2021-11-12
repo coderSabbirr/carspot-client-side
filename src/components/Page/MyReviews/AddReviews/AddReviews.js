@@ -18,7 +18,7 @@ const AddNew = () => {
         const rating = parseInt(data.reating)
 
         if (5 >= rating) {
-            fetch('http://localhost:4000/addreview', {
+            fetch('https://boiling-meadow-81562.herokuapp.com/addreview', {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(data),

@@ -8,7 +8,7 @@ const SingleOrderCart = ({ order,Orders }) => {
     const handleDelete = id => {
        
         if (window.confirm("Delete the item?")) {
-            const url = `http://localhost:4000/orders/${id}`
+            const url = `https://boiling-meadow-81562.herokuapp.com/orders/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
@@ -30,7 +30,7 @@ const SingleOrderCart = ({ order,Orders }) => {
         const update = {
             status: "Approved"
         }
-        const url = `http://localhost:4000/ordersupdate/${id}`;
+        const url = `https://boiling-meadow-81562.herokuapp.com/ordersupdate/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

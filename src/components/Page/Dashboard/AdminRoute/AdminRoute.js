@@ -8,7 +8,7 @@ const AdminRoute = ({ children, ...rest }) => {
 const [isAdmin, setIsAdmin] =useState(true);
 
 useEffect(() => {
-    fetch(`http://localhost:4000/checkAdmin/${user?.email}`)
+    fetch(`https://boiling-meadow-81562.herokuapp.com/checkAdmin/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
          

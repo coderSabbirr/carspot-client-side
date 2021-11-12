@@ -21,7 +21,7 @@ const Dashbaord = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/checkAdmin/${user?.email}`)
+    fetch(`https://boiling-meadow-81562.herokuapp.com/checkAdmin/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         if (data[0]?.role === "admin") {

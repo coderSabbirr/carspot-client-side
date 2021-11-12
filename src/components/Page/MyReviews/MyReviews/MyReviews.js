@@ -6,7 +6,7 @@ const MyReviews = () => {
     const { user } = useAuth();
     const [myReviews, setMyReview] = useState([])
     useEffect(() => {
-        const url = `http://localhost:4000/review/${user.email}`
+        const url = `https://boiling-meadow-81562.herokuapp.com/review/${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => setMyReview(data))

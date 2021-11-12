@@ -4,7 +4,7 @@ const MangeSingleProducts = ({ addnewpackage }) => {
 
     const handleDelete = id => {
         if (window.confirm("Delete the item?")) {
-            const url = `http://localhost:4000/products/${id}`
+            const url = `https://boiling-meadow-81562.herokuapp.com/products/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

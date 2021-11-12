@@ -7,7 +7,7 @@ const MyOrders = () => {
     const { user } = useAuth();
     const [myOrders, SetOrders] = useState([])
     useEffect(() => {
-        const url = `http://localhost:4000/orders/${user.email}`
+        const url = `https://boiling-meadow-81562.herokuapp.com/orders/${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => SetOrders(data))

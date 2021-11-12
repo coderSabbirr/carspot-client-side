@@ -8,7 +8,7 @@ const AddNew = () => {
     const { register, handleSubmit,reset } = useForm();
 
     const onSubmit = (data) => {
-        fetch('http://localhost:4000/addpackages', {
+        fetch('https://boiling-meadow-81562.herokuapp.com/addpackages', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

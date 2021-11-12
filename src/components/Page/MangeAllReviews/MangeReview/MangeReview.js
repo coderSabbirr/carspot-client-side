@@ -5,7 +5,7 @@ const MangeReview = ({ allReview }) => {
 
     const handleDelete = id => {
         if (window.confirm("Delete the Review?")) {
-            const url = `http://localhost:4000/review/${id}`
+            const url = `https://boiling-meadow-81562.herokuapp.com/review/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

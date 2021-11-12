@@ -9,7 +9,7 @@ const MangeProducts = () => {
     const [addnewpackages, setAddnewpackages] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:4000/products')
+        fetch('https://boiling-meadow-81562.herokuapp.com/products')
             .then((res) => res.json())
             .then(data => setAddnewpackages(data))
     }, [])

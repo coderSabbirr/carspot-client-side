@@ -97,7 +97,7 @@ const useFirebase = () => {
 
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch('http://localhost:4000/users', {
+    fetch('https://boiling-meadow-81562.herokuapp.com/users', {
         method: method,
         headers: {
             'content-type': 'application/json'

@@ -14,7 +14,7 @@ const MakeAdmin = () => {
     const handleAdminSubmit = e => {
         
         const user = { email };
-        fetch('http://localhost:4000/makeadmin', {
+        fetch('https://boiling-meadow-81562.herokuapp.com/makeadmin', {
             method: 'PUT',
             headers: {
                 

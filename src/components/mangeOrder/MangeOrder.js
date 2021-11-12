@@ -6,7 +6,7 @@ const MangeOrder = () => {
     const [Orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:4000/orders')
+        fetch('https://boiling-meadow-81562.herokuapp.com/orders')
             .then(res => res.json())
             .then((data) => setOrders(data))
     }, [])

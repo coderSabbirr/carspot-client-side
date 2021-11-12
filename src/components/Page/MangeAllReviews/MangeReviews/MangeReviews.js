@@ -6,7 +6,7 @@ const MangeReviews = () => {
     const { user } = useAuth();
     const [allReviews, setAllReviews] = useState([])
     useEffect(() => {
-        const url = `http://localhost:4000/reviews`
+        const url = `https://boiling-meadow-81562.herokuapp.com/reviews`
         fetch(url)
             .then(res => res.json())
             .then(data => setAllReviews(data))

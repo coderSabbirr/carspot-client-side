@@ -6,7 +6,7 @@ import useAuth from '../../../../hooks/useAuth';
 
 const AddNew = () => {
     const { user } = useAuth();
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit,reset } = useForm();
     // const handleReviw= e =>{
     //     e.target.value;
     // }
@@ -25,14 +25,14 @@ const AddNew = () => {
             })
                 .then((res) => res.json())
                 .then((result) => {
-    
+                    reset();
                     Swal.fire({
                         title: 'Thank You!',
                         text: 'Add Your Review',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                       })
-                    // window.location.reload();
+                
     
                 });
         }

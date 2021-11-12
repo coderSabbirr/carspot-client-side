@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { useParams } from 'react-router';
+import Swal from 'sweetalert2';
 import useAuth from '../../../hooks/useAuth';
 import './Booking.css';
 
 const Booking = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors },reset } = useForm();
     const { user } = useAuth();
     const { bookingId } = useParams();
     const [booking, setBooking] = useState([])
@@ -33,9 +34,15 @@ const Booking = () => {
         })
             .then((res) => res.json())
             .then((result) => {
-
+                reset();
+                Swal.fire({
+                    title: 'Thank You',
+                    text: 'Order Successful',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                  })
             });
-        alert("Order successfull")
+            
 
     };
     const { name, price, since, img, location } = booking;

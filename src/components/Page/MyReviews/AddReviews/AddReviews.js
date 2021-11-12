@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import Swal from 'sweetalert2';
 import useAuth from '../../../../hooks/useAuth';
 
 
@@ -25,13 +26,22 @@ const AddNew = () => {
                 .then((res) => res.json())
                 .then((result) => {
     
-                    alert('Review add Successfully');
-                    window.location.reload();
+                    Swal.fire({
+                        title: 'Thank You!',
+                        text: 'Add Your Review',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                      })
+                    // window.location.reload();
     
                 });
         }
         else {
-            alert('Please Rating 1-5 Star');
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please Rating 1-5 Star'
+              })
         }
 
        

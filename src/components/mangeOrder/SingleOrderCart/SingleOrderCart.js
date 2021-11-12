@@ -1,5 +1,4 @@
 import './SingleOrderCart.css';
-
 const SingleOrderCart = ({ order,Orders }) => {
 
     const{full_name,address,city,email,phone}=order;
@@ -7,6 +6,7 @@ const SingleOrderCart = ({ order,Orders }) => {
 
 
     const handleDelete = id => {
+       
         if (window.confirm("Delete the item?")) {
             const url = `http://localhost:4000/orders/${id}`
             fetch(url, {

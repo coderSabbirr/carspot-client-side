@@ -1,5 +1,6 @@
 import { Alert, Button, TextField } from '@mui/material';
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState('');
@@ -28,7 +29,12 @@ const MakeAdmin = () => {
                     setSuccess(true);
                 }
             })
-
+            Swal.fire({
+                title: 'Good job!',
+                text: 'Made Admin successfully!',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+              })
         e.preventDefault()
     }
     

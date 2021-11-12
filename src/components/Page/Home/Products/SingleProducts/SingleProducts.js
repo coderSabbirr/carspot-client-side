@@ -4,7 +4,7 @@ import './SingleProducts.css';
 const SingleProducts = ({ product }) => {
     const { name, since, price, location, img,_id} = product;
     return (
-        <div className="col vehicle-card">
+        <div className="col vehicle-card vehicle-card-full">
             <div className="card ">
                 <img src={img} className="card-img-top " alt="" />
                 <div className="card-body">

@@ -1,18 +1,34 @@
 import React from 'react';
 import './CustomerReview.css';
 const CustomerReview = ({review}) => {
-    console.log(review.doc)
-    const{name,photo,reating,doc}=review;
+
+    const{name,photo,reating,doc,ratingKey
+    }=review;
+
+    // customar rating 
+ 
+    const rating =parseInt(reating)
+
+  
     return (
-        
+     
            
-  <div class="col-md-6 mb-4 review-card">
-    <div class="card">
-      <div class="card-body">
-        <p>{reating}</p>
-        <p class="card-text">"{doc}"</p>
+  <div className="col-md-6 mb-4 review-card">
+    <div className="card review-card-bac">
+      <div className="card-body">
+        <div>
+          {[...Array(rating)].map(star=>{
+             return <i key={ratingKey
+             } className="fas rating fa-star" />
+             
+            })}
+        </div>
+        <p className="card-text">"{doc}"</p>
       </div>
-      <img src={photo} class="card-img-top" alt="..."/>
+      {photo?
+        <img src={photo} className="card-img-top" alt="..."/>:
+        <img src="https://i.ibb.co/YRwf7tH/icons8-user-50.png" className="card-img-top" alt="..."/>
+      }
       <h3>{name}</h3>
     </div>
   </div>

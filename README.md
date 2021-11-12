@@ -4,7 +4,7 @@
 
 ## Technology : ReactJS,Bootstrap CSS, Firebase,Mongodb,Node js, Express js,Heroku
 
-## 💻 Developed By
+## 💻 Developed By Sabbir
 
 ![Developer PIC](https://avatars.githubusercontent.com/u/86229415?s=96&v=4)
 
@@ -14,7 +14,7 @@
 
 #### Example:
 
-![alt text](https://i.ibb.co/8mRq0k9/Screenshot-149.jpg)
+![alt text](https://i.ibb.co/T1DvVwM/Screenshot-155.jpg)
 
 ## Installation and Setup Instructions
 
@@ -40,4 +40,4 @@ To Visit App:
 
 ## license
 
-Tour X (including the runtime repo) is licensed under the [MIT](LICENSE.TXT) license.
+CarSpot (including the runtime repo) is licensed under the [MIT](LICENSE.TXT) license.

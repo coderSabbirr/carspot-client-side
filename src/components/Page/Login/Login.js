@@ -33,21 +33,21 @@ const handleGoogleSignIn = () => {
     
   
     return (
-        <Container className="text-center">
+        <Container className="text-center ">
         <Grid container spacing={2}>
-            <Grid item sx={{ mt: 8 }} xs={12} md={6}>
+            <Grid item sx={{ mt: 8 }} xs={12} md={12}>
             {isLoading && <CircularProgress />}
-                <Typography variant="body1" gutterBottom>Login</Typography>
+                <Typography variant="body1" gutterBottom>Please Login</Typography>
                 <form onSubmit={handleLoginSubmit}>
                     <TextField
-                        sx={{ width: '75%', m: 1 }}
+                        sx={{ width: '50%', m: 1 }}
                         id="standard-basic"
                         label="Your Email"
                         name="email"
                         onChange={handleOnChange}
                         variant="standard" />
                     <TextField
-                        sx={{ width: '75%', m: 1 }}
+                        sx={{ width: '50%', m: 1 }}
                         id="standard-basic"
                         label="Your Password"
                         type="password"
@@ -55,16 +55,17 @@ const handleGoogleSignIn = () => {
                         onChange={handleOnChange}
                         variant="standard" />
 
-                    <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
+                    <Button sx={{ width: '50%', m: 1 }} type="submit" variant="contained">Login</Button>
                     <NavLink
                         style={{ textDecoration: 'none' }}
                         to="/register">
+                            <br/>
                         <Button variant="text">New User? Please Register</Button>
                     </NavLink>
                     {/* {user?.email && <Alert severity="success">Login successfully!</Alert>}
                     {authError && <Alert severity="error">{authError}</Alert>} */}
                 </form>
-                <p>------------------------</p>
+                <p>----------or-----------</p>
                 <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
             </Grid>
          

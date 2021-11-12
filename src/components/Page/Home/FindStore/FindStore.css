@@ -1,0 +1,80 @@
+.findstore-image {
+  float: right;
+  width: 50%;
+}
+.findstore-image img {
+  width: 100%;
+}
+.findStore {
+  height: 800px;
+  margin-top: 200px;
+}
+.findstore-text {
+  text-align: center;
+}
+.findstore-text h1 {
+  font-size: 60px;
+  text-align: center;
+  padding-top: 100px;
+}
+.button--primary a {
+  color: white !important;
+  text-decoration: none !important;
+}
+.button--secndary a {
+  color: #394144;
+  text-decoration: none !important;
+}
+.button--primary {
+  background-color: #394144;
+  color: white;
+  border-radius: 15px;
+  padding: 18px 70px;
+  border: 0;
+  margin-right: 80px;
+  margin-top: 50px;
+  font-weight: 500;
+  transition: 0.6s;
+}
+.button--primary:hover {
+  background-color: #e54592;
+}
+.why {
+  color: #e54592;
+}
+.button--secndary {
+  background-color: #f5f5f5;
+  border: 0;
+  padding: 18px 70px;
+  border-radius: 15px;
+  font-weight: 500;
+  transition: 0.6s;
+}
+.button--secndary:hover {
+  background-color: #cdcfd0;
+}
+@media only screen and (max-width: 688px) {
+  .findstore-image img {
+    width: 300px;
+    margin-left: -96px;
+  }
+  .findstore-text h1 {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 300px;
+  }
+  .findstore-text h3 {
+    font-size: 16px;
+  }
+  .button--primary {
+    padding: 10px 50px;
+    margin-right: 10px;
+    margin-top: 50px;
+  }
+  .button--secndary {
+    padding: 10px 40px;
+  }
+  .findStore {
+    height: 600px;
+  }
+}

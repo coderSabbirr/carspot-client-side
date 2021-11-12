@@ -2,6 +2,7 @@ import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography
 import React, { useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
+import '.././login.css';
 
 
 const Register = () => {
@@ -25,10 +26,10 @@ const Register = () => {
         e.preventDefault();
     }
     return (
-        <Container>
+        <Container className="text-center register">
             {/* <Grid container spacing={2}> */}
                 <Grid item sx={{ mt: 8 }} xs={12} md={12}>
-                    <Typography variant="body1" gutterBottom>Register</Typography>
+                    <Typography variant="body1" gutterBottom>Please Register</Typography>
                     {!isLoading && <form onSubmit={handleLoginSubmit}>
                         <TextField
                             sx={{ width: '75%', m: 1 }}

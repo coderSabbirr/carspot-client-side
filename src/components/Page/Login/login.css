@@ -1,53 +1,50 @@
-.login{
-    border: 2px solid rgb(7, 189, 221);
-    width:25%;
-    height:250px;
-    text-align: center;
-    margin: auto;
-    font-size: 20px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.login {
+  border: 2px solid rgb(7, 189, 221);
+  width: 25%;
+  height: 250px;
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.login button{
-   background-color: transparent;
-   border: 0;
-   color: white;
-   font-weight: 500;
+.login button {
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-weight: 500;
 }
-.login-btn{
-    margin-top: 20%;
-   background-color:rgba(13, 146, 255, 0.753);
-   width: 250px;
-   padding: 10px;
-   margin-left: 100px;
-   border-radius:20px;
-   
+.login-btn {
+  margin-top: 20%;
+  background-color: rgba(13, 146, 255, 0.753);
+  width: 250px;
+  padding: 10px;
+  margin-left: 100px;
+  border-radius: 20px;
 }
-.login-btn:hover{
-   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-   
+.login-btn:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-.login img{
-   width:30px;
+.login img {
+  width: 30px;
+}
+.register {
+  border: 2px solid rgb(0, 174, 255);
 }
 @media only screen and (max-width: 688px) {
-   .login{
-      
-      width:80%;
-      height:230px;
-       
-   }
-   .login-btn{
-      margin-top: 30%;
-     margin-left: 46px;
- 
-     
+  .login {
+    width: 80%;
+    height: 230px;
   }
-  .login-btn{
-   
-  width: 230px;
-  padding: 7px;
-  
+  .login-btn {
+    margin-top: 30%;
+    margin-left: 46px;
+  }
+  .login-btn {
+    width: 230px;
+    padding: 7px;
+  }
 }
-     
- }

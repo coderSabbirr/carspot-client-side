@@ -3,11 +3,14 @@ import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
 import useAuth from "../../../../hooks/useAuth";
 import MangeOrders from "../../../mangeOrder/MangeOrder";
 import AddNew from "../../AddNew/AddNew";
+import MangeReviews from "../../MangeAllReviews/MangeReviews/MangeReviews";
 import MangeProducts from "../../MangeProducts/MangeProducts";
 import MyOrders from "../../MyOrders/MyOrders";
 import AddReviews from "../../MyReviews/AddReviews/AddReviews";
 import MyReviews from "../../MyReviews/MyReviews/MyReviews.js";
 import Pay from "../../Pay/Pay";
+import AdminRoute from "../AdminRoute/AdminRoute";
+import DashbaordHome from "../DashboardHome/DashboardHome";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import "./Dashboard.css";
 
@@ -39,38 +42,43 @@ const Dashbaord = () => {
                 <h5 className="dashboard-heading">Dashboard</h5>
               </Link>
               <div className="dashboard-all">
-                <>
-                  <Link to={`${url}/myorder`}>
-                    <li className="dashboard-menu">My Orders</li>
-                  </Link>
-                  <Link to={`${url}/pay`}>
-                    <li className="dashboard-menu">Payment Option</li>
-                  </Link>
-                  <Link to={`${url}/addreview`}>
-                    <li className="dashboard-menu">Add Review</li>
-                  </Link>
-                  <Link to={`${url}/myreview`}>
-                    <li className="dashboard-menu">My Review</li>
-                  </Link>
-                </>
-                <>
+                {isAdmin ?
+                  <>
+                    <Link to={`${url}/myorder`}>
+                      <li className="dashboard-menu">My Orders</li>
+                    </Link>
+                    <Link to={`${url}/pay`}>
+                      <li className="dashboard-menu">Payment Option</li>
+                    </Link>
+                    <Link to={`${url}/addreview`}>
+                      <li className="dashboard-menu">Add Review</li>
+                    </Link>
+                    <Link to={`${url}/myreview`}>
+                      <li className="dashboard-menu">My Review</li>
+                    </Link>
+                  </> :
+                 <>
+                 <Link to={`${url}/orderslist`}>
+                   <li className="dashboard-menu">  Orders list</li>
+                 </Link>
+                 <Link to={`${url}/allreview`}>
+                   <li className="dashboard-menu">  Review list</li>
+                 </Link>
+                 <Link to={`${url}/addproduct`}>
+                   <li className="dashboard-menu">Add Prodcuts</li>
+                 </Link>
+                 <Link to={`${url}/mangeproducts`}>
+                   <li className="dashboard-menu">Manage Cars</li>
+                 </Link>
+                 <Link to={`${url}/makeAdmin`}>
+                   <li className="dashboard-menu">Make Admin</li>
+                 </Link>
 
-                  <Link to={`${url}/orderslist`}>
-                    <li className="dashboard-menu">  Orders list</li>
-                  </Link>
-                  <Link to={`${url}/addproduct`}>
-                    <li className="dashboard-menu">Add Prodcuts</li>
-                  </Link>
-                  <Link to={`${url}/mangeproducts`}>
-                    <li className="dashboard-menu">Manage Cars</li>
-                  </Link>
-                  <Link to={`${url}/makeAdmin`}>
-                    <li className="dashboard-menu">Make Admin</li>
-                  </Link>
 
-
-                </>
-                <Link>
+               </>
+               }
+               
+                <Link to="..">
                   <li className="dashboard-menu logout-dashboard" onClick={logOut}> Logout</li>
                 </Link>
               </div>
@@ -78,6 +86,7 @@ const Dashbaord = () => {
           </div>
           <div className="col-md-9">
             <Switch>
+
 
               <Route path={`${path}/myorder`}>
                 <MyOrders></MyOrders>
@@ -91,23 +100,25 @@ const Dashbaord = () => {
               <Route path={`${path}/pay`}>
                 <Pay></Pay>
               </Route>
-              <Route path={`${path}/orderslist`}>
+              <AdminRoute path={`${path}/orderslist`}>
                 <MangeOrders></MangeOrders>
-              </Route>
-              <Route path={`${path}/orderslist`}>
-                <MangeOrders></MangeOrders>
-              </Route>
-              <Route path={`${path}/addproduct`}>
+              </AdminRoute>
+              <AdminRoute path={`${path}/allreview`}>
+                <MangeReviews></MangeReviews>
+              </AdminRoute>
+              <AdminRoute path={`${path}/addproduct`}>
                 <AddNew></AddNew>
-              </Route>
-              <Route path={`${path}/mangeproducts`}>
+              </AdminRoute>
+              <AdminRoute path={`${path}/mangeproducts`}>
                 <MangeProducts></MangeProducts>
-              </Route>
-              <Route path={`${path}/makeAdmin`}>
+              </AdminRoute>
+              <AdminRoute path={`${path}/makeAdmin`}>
                 <MakeAdmin></MakeAdmin>
+              </AdminRoute>
+
+              <Route path={path}>
+                <DashbaordHome></DashbaordHome>
               </Route>
-
-
 
 
             </Switch>

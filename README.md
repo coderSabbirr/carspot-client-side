@@ -2,6 +2,11 @@
 
 ## Live Preview :https://car-spot-bd.web.app/
 
+## To get more functionality please login
+
+Email:admin@admin@gmail.com
+Password:@@123456
+
 ## Overview
 
 • Product Website including admin panel to add or remove products</br>

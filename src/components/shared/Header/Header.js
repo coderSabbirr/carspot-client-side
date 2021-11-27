@@ -27,9 +27,11 @@ const Header = () => {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/products">Our Products</NavLink>
               </li>
+              {user.email &&
               <li className="nav-item">
-                <NavLink className="nav-link" to="/dashboard">Dashboard </NavLink>
-              </li>
+              <NavLink className="nav-link" to="/dashboard">Dashboard </NavLink>
+            </li>
+              }
               <li className="user">
                   { user?.photoURL ?
                     <img className="px-2  user" src={user.photoURL} alt="" /> :

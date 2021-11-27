@@ -1,27 +1,38 @@
+import Swal from 'sweetalert2';
 import './SingleOrderCart.css';
 const SingleOrderCart = ({ order,Orders }) => {
-
     const{full_name,address,city,email,phone}=order;
     const{name,price}=order.package_details;
 
 
     const handleDelete = id => {
        
-        if (window.confirm("Delete the item?")) {
-            const url = `https://boiling-meadow-81562.herokuapp.com/orders/${id}`
-            fetch(url, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    window.location.reload();
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                const url = `https://boiling-meadow-81562.herokuapp.com/orders/${id}`
+                fetch(url, {
+                    method: 'DELETE'
                 })
-
-        }
-        else {
-            return
-        }
-
+                    .then(res => res.json())
+                    .then(data => {
+                        window.location.reload();
+                    })
+              Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+              )
+            }
+          })
+       
     }
 
 

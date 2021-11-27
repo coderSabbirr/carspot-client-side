@@ -1,23 +1,42 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 import './Order.css';
 const Order = ({ order }) => {
     const handleDelete = (id) => {
-        if (window.confirm("Delete the item?")) {
-
-            const url = `https://boiling-meadow-81562.herokuapp.com/orders/${id}`
-            fetch(url, {
-                method: 'DELETE'
-            })
-
-                .then(res => res.json())
-                .then(data => {
-                    window.location.reload();
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const url = `https://boiling-meadow-81562.herokuapp.com/orders/${id}`
+                fetch(url, {
+                    method: 'DELETE'
                 })
+                    .then(res => res.json())
+                    .then(data => {
+                        window.location.reload();
+                    })
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
 
-        }
-        else {
-            return;
-        }
+
+            }
+
+
+
+
+        })
+
+
+
 
     }
     const { name, since, price, location, img, } = order.package_details;
@@ -44,10 +63,10 @@ const Order = ({ order }) => {
                                     </span>
                                     {location}
                                 </section>
-                               <section>
-                               <button className="order-cencel" onClick={() => handleDelete(order._id)}>Cencel Order</button>
-                                <button className=" ms-4 order-status" >{order.status.status}</button>
-                               </section>
+                                <section>
+                                    <button className="order-cencel" onClick={() => handleDelete(order._id)}>Cencel Order</button>
+                                    <button className=" ms-4 order-status" >{order.status.status}</button>
+                                </section>
                             </div>
                         </div>
                     </div>

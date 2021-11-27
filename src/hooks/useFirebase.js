@@ -50,7 +50,6 @@ const useFirebase = () => {
         history.replace('/');
       })
       .catch((error) => {
-        setAuthError(error.message);
         console.log(error);
       })
       .finally(() => setIsLoading(false));

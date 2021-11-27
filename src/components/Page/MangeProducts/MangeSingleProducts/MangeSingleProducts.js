@@ -1,23 +1,40 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 import './MangeSingleProducts.css';
 const MangeSingleProducts = ({ addnewpackage }) => {
 
+    
     const handleDelete = id => {
-        if (window.confirm("Delete the item?")) {
-            const url = `https://boiling-meadow-81562.herokuapp.com/products/${id}`
-            fetch(url, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    window.location.reload();
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                const url = `https://boiling-meadow-81562.herokuapp.com/products/${id}`
+                fetch(url, {
+                    method: 'DELETE'
                 })
+                    .then(res => res.json())
+                    .then(data => {
+                        window.location.reload();
+                    })
 
-        }
-        else {
-            return;
-        }
+              Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+              )
+            }
+          })
 
+
+        
     }
     const { name, since, price, location, img, _id } = addnewpackage
     return (

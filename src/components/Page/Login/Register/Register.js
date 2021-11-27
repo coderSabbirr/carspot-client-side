@@ -1,6 +1,7 @@
 import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import useAuth from '../../../../hooks/useAuth';
 import '.././login.css';
 
@@ -18,12 +19,23 @@ const Register = () => {
         setLoginData(newLoginData);
     }
     const handleLoginSubmit = e => {
+        e.preventDefault();
         if (loginData.password !== loginData.password2) {
-            alert('Your password did not match');
+            Swal.fire({
+                text: 'Your password did not match',
+                icon: 'error',
+                confirmButtonText: 'try again'
+              })
             return
         }
+        Swal.fire({
+            text: 'Registration Successful',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+          })
         registerUser(loginData.email, loginData.password, loginData.name, history);
-        e.preventDefault();
+
+        
     }
     return (
         <Container className="text-center register">

@@ -4,7 +4,7 @@
 
 ## To get more functionality please login
 
-Email:admin@admin@gmail.com
+Email:admin@admin.com
 Password:@@123456
 
 ## Overview
